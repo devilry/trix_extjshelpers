@@ -6,7 +6,7 @@ this_dir = dirname(__file__)
 setup(
     name = 'trix_extjshelpers',
     description = 'trix_extjshelpers',
-    license = 'TBD',
+    license = 'BSD',
     author = 'TBD',
     maintainer = 'Jonathan Ringstad',
     maintainer_email = 'jonathri@student.matnat.uio.no',
@@ -17,7 +17,6 @@ setup(
         'devilry',
         'devilry_theme',
         'devilry_usersearch',
-        'devilry_extjsextras',
         'djangorestframework'],
     include_package_data = True,
     long_description = open( join( this_dir, 'README.rst' ) ).read().strip(),
