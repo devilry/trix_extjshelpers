@@ -34,5 +34,18 @@ Ext.define('trix_extjshelpers.RestfulSimplifiedEditWindowBase', {
 
     onSaveSuccess: function(record) {
         throw "Must implement onSaveSuccess()";
+    },
+
+    onEsc: function() {
+        var me = this;
+        Ext.Msg.confirm(
+            'Confirm close',
+            'You really want to close this window? You will loose any unsaved changes.',
+            function(btn) {
+                if (btn === 'yes') {
+                    me.hide();
+                }
+            }
+        );
     }
 });
