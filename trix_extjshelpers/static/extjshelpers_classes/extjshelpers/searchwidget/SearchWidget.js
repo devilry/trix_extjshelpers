@@ -22,7 +22,7 @@
 Ext.define('trix_extjshelpers.searchwidget.SearchWidget', {
     extend: 'Ext.container.Container',
     alias: 'widget.searchwidget',
-    cls: 'widget-searchwidget',
+    cls: 'trixSearchWidget',
     requires: [
         'trix_extjshelpers.SearchField',
         'trix_extjshelpers.searchwidget.SearchResults',
@@ -53,19 +53,17 @@ Ext.define('trix_extjshelpers.searchwidget.SearchWidget', {
         }, this);
         this.searchfield = Ext.widget('searchfield', {
             emptyText: this.emptyText,
-            flex: 1
+            margin: 0,
+            columnWidth: 1
         });
 
         Ext.apply(this, {
-            layout: {
-                type: 'hbox',
-                align: 'stretch'
-            },
-            height: 40,
+            layout: 'column',
             items: [this.searchfield, {
                 xtype: 'button',
+                width: 110,
                 text: gettext('Browse') + ' ...',
-                scale: 'medium',
+                scale: 'small',
                 listeners: {
                     scope: this,
                     click: function() {
