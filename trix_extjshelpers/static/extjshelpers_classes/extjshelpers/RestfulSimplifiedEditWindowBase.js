@@ -17,8 +17,8 @@ Ext.define('trix_extjshelpers.RestfulSimplifiedEditWindowBase', {
 
         var form = this.editpanel.down('form');
         if(!this.width && form.suggested_windowsize) {
-            this.width = form.suggested_windowsize.width,
-            this.height = form.suggested_windowsize.height
+            this.width = form.suggested_windowsize.width;
+            this.height = form.suggested_windowsize.height;
         }
         this.maximizable = false; // Mazimize does not work with autosizing.
 
@@ -33,6 +33,6 @@ Ext.define('trix_extjshelpers.RestfulSimplifiedEditWindowBase', {
     },
 
     onSaveSuccess: function(record) {
-        throw "Must implement onSaveSuccess()"
+        throw "Must implement onSaveSuccess()";
     }
 });
